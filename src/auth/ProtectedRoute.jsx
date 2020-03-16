@@ -11,7 +11,7 @@ Only the last parameter can be a "rest parameter".
 export const ProtectedRoute = ({ component: Component, ...rest }) => {
   const { isLoggedIn, isLoading } = useAuth();
   // return default template while performing async auth task
-  if (isLoading) return <div className="flex-center-column loading"><img className="loading-img spinner" src="/images/loading.gif" /></div>;
+  if (isLoading) return <div className="flex-center-column loading"><img className="loading-img spinner" src="/images/loading.gif" alt="spinner"/></div>;
   return isLoggedIn ? (
     // if logged in, return a regular Route component
     // this Route gets any passed (...rested) props in a literal object

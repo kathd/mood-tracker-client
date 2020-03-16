@@ -8,7 +8,7 @@ const Login = () => {
 
   const {isLoading,  isLoggedIn } = useAuth();
 
-  if(isLoading) return <div className="flex-center-column loading"><img className="spinner loading-img" src="/images/loading.gif" /></div>
+  if(isLoading) return <div className="flex-center-column loading"><img className="spinner loading-img" src="/images/loading.gif" alt="spinner"/></div>
   if(isLoggedIn) return <Redirect to="/dashboard" />
 
   return (
